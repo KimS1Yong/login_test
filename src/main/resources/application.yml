@@ -1,1 +1,5 @@
-spring.application.name=login_test
+spring:
+  application:
+    name: login_test
+  profiles:
+    active: dev

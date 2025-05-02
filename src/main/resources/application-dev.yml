@@ -1,5 +1,26 @@
+server:
+  port: 8080
 spring:
-  application:
-    name: login_test
-  profiles:
-    active: dev
+  # JPA
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+
+kakao:
+  client-id: 47f3cbfe455bf08ea91d0a632829b65e
+  redirect-uri: http://localhost:3000/oauth/callback/kakao
+  token-uri: https://kauth.kakao.com/oauth/token
+  user-info-uri: https://kapi.kakao.com/v2/user/me
