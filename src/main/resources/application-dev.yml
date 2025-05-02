@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: login_test
+  profiles:
+    active: dev
